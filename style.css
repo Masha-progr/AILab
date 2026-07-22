@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    color: #1e2b3c;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(135deg, #0b2b4a, #1b4b6c);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-top: 8px;
+}
+
+header .meta {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.12);
+    display: inline-block;
+    padding: 6px 24px;
+    border-radius: 40px;
+}
+
+/* Карточки-виджеты */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 18px;
+    padding: 20px 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: 0.2s;
+    border: 1px solid #e9edf4;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card .number {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #0b2b4a;
+}
+
+.stat-card .label {
+    font-size: 0.9rem;
+    color: #5d6f83;
+    margin-top: 4px;
+}
+
+/* Основная сетка */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 780px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e9edf4;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #0b2b4a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card h3 span {
+    font-size: 1.3rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 220px;
+}
+
+/* Выводы */
+.insight-box {
+    background: #eaf3fa;
+    border-left: 5px solid #1b6b9c;
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin-top: 18px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.insight-box strong {
+    color: #0b2b4a;
+}
+
+.footer-note {
+    background: white;
+    border-radius: 20px;
+    padding: 24px 28px;
+    border: 1px solid #e9edf4;
+    margin-top: 24px;
+}
+
+.footer-note h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.footer-note ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-note li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f3f8;
+    display: flex;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.footer-note li:last-child {
+    border-bottom: none;
+}
+
+.badge-ai {
+    background: #d4e3fd;
+    color: #1a4d7a;
+    padding: 2px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-human {
+    background: #e8f0e8;
+    color: #1f5a3a;
+    padding: 2px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.limited {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: #4c6379;
+    background: #f0f4fa;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px dashed #bacddc;
+}
+
+.limited strong {
+    color: #0b2b4a;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    .stat-card .number {
+        font-size: 1.8rem;
+    }
+}

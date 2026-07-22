@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ИИ в учёбе студентов — Исследование</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Как студенты используют ИИ для учёбы</h1>
+            <p>Исследование на основе опроса 25 студентов СПб</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">76%</div>
+                <div class="label">используют ИИ регулярно</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">92%</div>
+                <div class="label">используют ChatGPT</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">72%</div>
+                <div class="label">сталкивались с ошибками ИИ</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">28%</div>
+                <div class="label">всегда проверяют факты</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">56%</div>
+                <div class="label">учиться стало легче</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+
+            <div class="card">
+                <h3>Частота использования ИИ</h3>
+                <div class="chart-container">
+                    <canvas id="chartFrequency"></canvas>
+                </div>
+                <div class="insight-box">
+                    <strong>76%</strong> студентов используют ИИ <strong>ежедневно или несколько раз в неделю</strong>.
+                    Только 8% никогда не обращались к ИИ.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Для чего используют ИИ?</h3>
+                <div class="chart-container">
+                    <canvas id="chartPurposes"></canvas>
+                </div>
+                <div class="insight-box">
+                    <strong>Топ-3:</strong> написание текстов (76%), объяснение тем (60%), написание кода (52%).
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><span>🔍</span> Проверяют ли информацию?</h3>
+                <div class="chart-container">
+                    <canvas id="chartVerification"></canvas>
+                </div>
+                <div class="insight-box">
+                    <strong>72%</strong> сталкивались с ошибками ИИ, но <strong>только 28% всегда проверяют</strong> ответы.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Считают ли ИИ читерством?</h3>
+                <div class="chart-container">
+                    <canvas id="chartCheating"></canvas>
+                </div>
+                <div class="insight-box">
+                    <strong>44%</strong> не считают ИИ читерством, ещё 40% — «зависит от ситуации».
+                    Большинство воспринимает ИИ как инструмент.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card" style="margin-bottom: 24px;">
+            <h3><Как ИИ повлиял на учёбу?></h3>
+            <div style="max-width: 400px; height: 180px; margin: 0 auto;">
+                <canvas id="chartImpact"></canvas>
+            </div>
+            <div class="insight-box">
+                <strong>56%</strong> студентов говорят, что учиться стало <strong>легче</strong>.
+                Лишь 4% отметили, что стало сложнее.
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 24px;">
+            <div class="card">
+                <h3>Подтверждение гипотезы</h3>
+                <p style="line-height: 1.6; font-size: 0.98rem;">
+                    <strong>Частично.</strong> Студенты действительно активно используют ИИ,
+                    и многие не проверяют информацию (лишь 28% всегда проверяют).
+                    Однако большинство воспринимает ИИ как <strong>помощника</strong>,
+                    а не как замену мышлению.
+                </p>
+                <div style="margin-top: 14px; background: #f4f7fc; padding: 14px 16px; border-radius: 14px; font-size: 0.92rem;">
+                    <strong>Ключевые выводы:</strong><br />
+                    • ChatGPT — лидер (92%)<br />
+                    • 72% сталкивались с ошибками, но проверяют редко<br />
+                    • 56% — учёба стала легче<br />
+                    • 48% не боятся замены профессии
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Где ИИ помог, а где — нет</h3>
+                <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 1.7;">
+                    <li style="display: flex; gap: 10px; padding: 6px 0; border-bottom: 1px solid #f0f3f8;">
+                        <span class="badge-ai">ИИ</span>
+                        <span>Структура, гипотеза, анкета, поиск источников, интерпретация цифр</span>
+                    </li>
+                    <li style="display: flex; gap: 10px; padding: 6px 0; border-bottom: 1px solid #f0f3f8;">
+                        <span class="badge-human">Сама</span>
+                        <span>Сбор данных, проверка фактов (ИИ давал несуществующие ссылки)</span>
+                    </li>
+                    <li style="display: flex; gap: 10px; padding: 6px 0; border-bottom: 1px solid #f0f3f8;">
+                        <span class="badge-human">Сама</span>
+                        <span>Анализ открытых ответов, критическая оценка, презентация</span>
+                    </li>
+                    <li style="display: flex; gap: 10px; padding: 6px 0;">
+                        <span class="badge-ai">ИИ</span>
+                        <span>Код для этого дашборда, визуализации</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <h3>Ограничения исследования</h3>
+            <ul>
+                <li><strong>Малая выборка</strong> — 25 человек, что не позволяет делать глобальные выводы</li>
+                <li><strong>География</strong> — только студенты Санкт-Петербурга</li>
+                <li><strong>Самоотбор</strong> — в опросе участвовали те, кому интересна тема ИИ</li>
+                <li><strong>Специализация</strong> — преимущественно технические специальности</li>
+            </ul>
+            <div class="limited">
+                <strong>Степень уверенности:</strong> 65–70%<br />
+                <span style="font-size: 0.9rem; color: #4c6379;">Для повышения надёжности нужно расширить выборку до 100+ человек и охватить гуманитарные специальности.</span>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.9rem; color: #3d5a73; background: #e6f0ea; padding: 12px 18px; border-radius: 14px;">
+                <strong>Сопоставление с внешними источниками:</strong>
+                Данные совпадают с трендами исследований НИУ ВШЭ (2024) и Stanford (2025) —
+                студенты активно используют ИИ, но недостаточно проверяют информацию.
+                В российских выборках доля использующих ИИ выше, чем в зарубежных.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

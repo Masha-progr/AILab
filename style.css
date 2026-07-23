@@ -16,7 +16,6 @@ body {
     margin: 0 auto;
 }
 
-/* Шапка */
 header {
     background: linear-gradient(135deg, #0b2b4a, #1b4b6c);
     color: white;
@@ -48,7 +47,6 @@ header .meta {
     border-radius: 40px;
 }
 
-/* Карточки-виджеты */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -83,7 +81,6 @@ header .meta {
     margin-top: 4px;
 }
 
-/* Основная сетка */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -124,7 +121,6 @@ header .meta {
     height: 220px;
 }
 
-/* Выводы */
 .insight-box {
     background: #eaf3fa;
     border-left: 5px solid #1b6b9c;

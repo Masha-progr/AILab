@@ -1,9 +1,9 @@
-const blue = '#1b6b9c';
-const lightBlue = '#4a90b9';
-const gray = '#95a9bc';
-const orange = '#d97a3a';
-const green = '#3a8f6b';
-const red = '#c45a5a';
+const blue = '#2d92d0';
+const lightBlue = '#69b0d8';
+const gray = '#bbcbdb';
+const purple = '#44a9e8';
+const green = '#1a4d7a';
+const red = '#d0d0d0';
 
 new Chart(document.getElementById('chartFrequency'), {
     type: 'bar',
@@ -98,7 +98,7 @@ new Chart(document.getElementById('chartImpact'), {
         datasets: [{
             label: '% студентов',
             data: [56, 24, 16, 4],
-            backgroundColor: [green, lightBlue, orange, red],
+            backgroundColor: [green, lightBlue, purple, red],
             borderRadius: 6,
         }]
     },
